@@ -1898,12 +1898,71 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   display: flex;
   align-items: center;
 }
+.hero-home .hero-container {
+  height: 100%;
+}
+.hero-home .hero-row {
+  min-height: 100vh;
+  text-align: center;
+}
+.hero-home .hero-content {
+  padding: 24px 16px;
+}
+.hero-home .hero-eyebrow {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 10px;
+}
   @media (max-width: 991.98px) {
     .hero-wrap {
       background-attachment: scroll;
       background-position: center center; 
       min-height: 100vh;
     } 
+  }
+  @media (max-width: 991.98px) {
+    .hero-home .hero-row {
+      min-height: 100vh;
+    }
+  }
+  @media (max-width: 575.98px) {
+    .hero-wrap {
+      align-items: flex-start;
+    }
+    .hero-wrap .slider-text {
+      align-items: flex-start !important;
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
+    .hero-content {
+      padding: 12px 12px 0;
+    }
+    .hero-heading {
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: 1.2px;
+      padding: 0 8px;
+      margin-bottom: 12px;
+    }
+    .hero-description {
+      font-size: 15px;
+      line-height: 1.5;
+      padding: 0 12px;
+      margin-bottom: 18px;
+    }
+    .hero-buttons {
+      gap: 12px;
+    }
+    .btn-hero {
+      width: 100%;
+      max-width: 320px;
+      padding: 14px 18px;
+      font-size: 13px;
+      min-width: 0;
+    }
   }
   .hero-wrap .overlay {
     position: absolute;
@@ -1934,7 +1993,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   .hero-heading {
     font-weight: 700;
     color: #fff;
-    font-size: 48px;
+    font-size: 52px;
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -1948,7 +2007,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   
   .hero-description {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     margin-bottom: 1.5rem;
     max-width: 800px;
@@ -1973,6 +2032,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     letter-spacing: 1px;
     min-width: 200px;
     transition: all 0.3s ease;
+  }
+
+  @media (min-width: 1200px) {
+    .btn-hero {
+      padding: 18px 40px;
+      font-size: 15px;
+      min-width: 240px;
+    }
   }
   
   .hero-wrap .slider-text {
@@ -2044,36 +2111,44 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
       /* Mobile breakpoint */
       @media (max-width: 767.98px) {
         .hero-wrap {
-          min-height: 100vh;
+          min-height: 92vh;
           height: auto;
         }
-        .hero-heading {
-          font-size: 28px;
-          padding: 0 20px;
+        .hero-home .hero-row {
+          min-height: 92vh;
+          align-items: flex-start;
+          padding-top: 48px;
+          padding-bottom: 56px;
         }
-        .hero-description {
-          font-size: 14px;
-          line-height: 1.5;
-          margin-bottom: 1.25rem;
-          padding: 0 251.5;
-          margin-bottom: 1.25rem;
+        .hero-home .hero-content {
+          padding: 12px 12px 0;
+        }
+        .hero-home .hero-heading {
+          font-size: 34px;
+          line-height: 1.15;
+          letter-spacing: 1.2px;
           padding: 0 10px;
+          margin-bottom: 10px;
         }
-        .hero-buttons {
+        .hero-home .hero-description {
+          font-size: 16px;
+          line-height: 1.5;
+          padding: 0 10px;
+          margin-bottom: 16px;
+        }
+        .hero-home .hero-buttons {
           flex-direction: column;
           gap: 12px;
-          width: 100%;
-          padding: 0 15px;
+          margin-top: 20px;
         }
-        .btn-hero {
+        .hero-home .btn-hero {
           width: 100%;
-          max-width: 100%;
-          padding: 14px 20px;
+          max-width: 320px;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 14px 18px;
           font-size: 13px;
-          min-width: auto;
-        }
-        .hero-content {
-          padding: 15px 10px;
+          min-width: 0;
         }
       }
       
