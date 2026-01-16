@@ -40,6 +40,14 @@ const { title } = Astro.props;
     <slot />
     <Footer />
 
+        <div id="cookie-notice" class="cookie-notice" role="dialog" aria-live="polite" aria-label="Cookie notice">
+            <div class="cookie-notice__content">
+                <p class="cookie-notice__text">We use cookies to improve your experience on our site. By using our site, you agree to our use of cookies.</p>
+                <a class="cookie-notice__link" href="/privacy">Privacy Policy</a>
+            </div>
+            <button id="cookie-accept" class="cookie-notice__button" type="button">OK</button>
+        </div>
+
     <a href="https://wa.me/27725923491" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fa fa-whatsapp"></i>
     </a>
@@ -53,5 +61,21 @@ const { title } = Astro.props;
     <!-- <script is:inline src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
     <!-- <script is:inline src="/js/google-map.js"></script> -->
     <script is:inline src="/js/main.js"></script>
+        <script is:inline>
+            (function () {
+                var storageKey = 'lc_cookie_consent';
+                var notice = document.getElementById('cookie-notice');
+                var acceptBtn = document.getElementById('cookie-accept');
+                if (!notice || !acceptBtn) return;
+                if (localStorage.getItem(storageKey) === 'accepted') {
+                    notice.classList.add('is-hidden');
+                    return;
+                }
+                acceptBtn.addEventListener('click', function () {
+                    localStorage.setItem(storageKey, 'accepted');
+                    notice.classList.add('is-hidden');
+                });
+            })();
+        </script>
 </body>
 </html>

@@ -136,9 +136,13 @@
 
 	//GLIGHTBOX
 	const lightbox = GLightbox({
+	  selector: '.glightbox',
 	  touchNavigation: true,
 	  loop: true,
-	  autoplayVideos: true
+	  autoplayVideos: true,
+	  closeOnOutsideClick: true,
+	  zoomable: true,
+	  draggable: true
 	});
 
 

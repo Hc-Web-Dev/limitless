@@ -2715,7 +2715,7 @@ textarea.form-control {
         .ftco-gallery .gallery-wrap .desc h2 a, .ftco-gallery .gallery-wrap .desc .h2 a {
           color: #fff; }
     .ftco-gallery .gallery-wrap:hover:after {
-      opacity: .3; }
+      opacity: 0; }
     .ftco-gallery .gallery-wrap:hover .icon {
       opacity: 1; }
     .ftco-gallery .gallery-wrap:hover .desc {
@@ -2909,15 +2909,22 @@ textarea.form-control {
       color: #fff; }
 
 .testimony-wrap {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   background: white;
   padding: 35px 30px 30px 30px !important;
   width: 98%;
   margin: 0 auto;
+  min-height: 340px;
   -webkit-box-shadow: 0px 5px 12px -9px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: 0px 5px 12px -9px rgba(0, 0, 0, 0.17);
   box-shadow: 0px 5px 12px -9px rgba(0, 0, 0, 0.17); }
+  .carousel-testimony .item,
+  .carousel-testimony .testimony-wrap {
+    height: 100%; }
+  .testimony-wrap .msg {
+    flex-grow: 1; }
   .testimony-wrap .icon {
     position: absolute;
     bottom: 0px;
@@ -3451,4 +3458,66 @@ textarea.form-control {
         right: 20px;
         font-size: 30px;
     }
+}
+
+/* Cookie Notice */
+.cookie-notice {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #1f242b;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1100;
+}
+
+.cookie-notice.is-hidden {
+  display: none;
+}
+
+.cookie-notice__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cookie-notice__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.cookie-notice__link {
+  color: #f2b246;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.cookie-notice__button {
+  background: #f2b246;
+  color: #111111;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cookie-notice__button:hover {
+  background: #e2a53b;
+}
+
+@media screen and (max-width: 767px) {
+  .cookie-notice {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
