@@ -93,7 +93,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="col-md-4 d-flex align-items-center" data-aos="fade-up" data-aos-delay="0" data-aos-duration="400">
-            <p class="mb-0"><a href="#" class="btn btn-primary py-md-4 py-3 px-md-5 px-4">Contact Us</a></p>
+            <p class="mb-0"><a href="/contact" class="btn btn-primary py-md-4 py-3 px-md-5 px-4">Contact Us</a></p>
           </div>
         </div>
       </div>
@@ -109,13 +109,9 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="mb-4">Services</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6 d-flex align-items-stretch">
-        <div class="img w-100" style="background: url(/images/services.jpg);"></div>
-      </div>
-      <div class="col-md-6">
-        
-        <div class="services d-flex active" data-aos="fade-up" data-aos-delay="0" data-aos-duration="400">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="services d-flex active w-100" data-aos="fade-up" data-aos-delay="0" data-aos-duration="400">
           <div class="icon"><span class="flaticon-construction"></span></div>
           <div class="text">
             <h2>Renovations & Building</h2>
@@ -123,7 +119,9 @@ import Layout from '../layouts/Layout.astro';
             <p><a href="/contact" class="btn-custom">Contact Us</a></p>
           </div>
         </div>
-        <div class="services d-flex active-2" data-aos="fade-up" data-aos-delay="50" data-aos-duration="400">
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="services d-flex active-2 w-100" data-aos="fade-up" data-aos-delay="50" data-aos-duration="400">
           <div class="icon"><span class="flaticon-house-1"></span></div>
           <div class="text">
             <h2>Repairs & Maintenance</h2>
@@ -131,7 +129,9 @@ import Layout from '../layouts/Layout.astro';
             <p><a href="/contact" class="btn-custom">Contact Us</a></p>
           </div>
         </div>
-        <div class="services d-flex" data-aos="fade-up" data-aos-delay="100" data-aos-duration="400">
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="services d-flex w-100" data-aos="fade-up" data-aos-delay="100" data-aos-duration="400">
           <div class="icon"><span class="flaticon-engineer"></span></div>
           <div class="text">
             <h2>Specialized Works</h2>
@@ -400,21 +400,8 @@ import Layout from '../layouts/Layout.astro';
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label for="subject">Select Subject</label>
-                          <div class="form-field">
-                            <div class="select-wrap">
-                              <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                              <select name="" id="" class="form-control">
-                                <option value="">Construction Services</option>
-                                <option value="">Infrastructure Services</option>
-                                <option value="">Architecture Services</option>
-                                <option value="">Budget Planning</option>
-                                <option value="">Interior &amp; Exterior Design</option>
-                                <option value="">Project Planning</option>
-                                <option value="">Others</option>
-                              </select>
-                            </div>
-                          </div>
+                          <label for="subject">Subject</label>
+                          <input type="text" class="form-control" placeholder="Subject">
                         </div>
                       </div>
                       <div class="col-md-12">
